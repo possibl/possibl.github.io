@@ -5,22 +5,104 @@
     <meta charset="utf-8">
     <title>FHS robotics website</title>
     <style>
-      
+
       #FHS-robotics-club-title {
         color: rgb(0,100,150);
+        font-size: 55px;
       }
-      
+
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        padding: 0px 0px;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
       body {
-        background-color: rgb(226, 204, 235);
+        background-color: rgb(250, 232, 255);
       }
-      
+
     </style>
   </head>
   <body>
-    
-    <h2 id="FHS-robotics-club-title">FHS robotics club</h2>
-        <a target="_blank" href="http://home.web.cern.ch/topics/birth-web">Read more about the history of HTML</a>
-    <p>pls join now</p>
-    
+
+    <h1 id="FHS-robotics-club-title">
+      <center> FHS robotics club </center>
+    </h1>
+
+        <!-- Tab links -->
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Home Page')">Home Page</button>
+      <button class="tablinks" onclick="openCity(event, 'Sign Up')">Sign Up</button>
+      <button class="tablinks" onclick="openCity(event, 'Tournoment Infomation')">Tournoment Infomation</button>
+      <button class="tablinks" onclick="openCity(event, 'About our Teams')">About our Teams</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Home Page" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Sign Up" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tournoment Infomation" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <div id="About our Teams" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+
   </body>
 </html>
