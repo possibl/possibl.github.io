@@ -7,10 +7,20 @@
     <style>
       * {box-sizing: border-box}
 
-      #FHS-robotics-club-title {
-        color: rgb(0,100,150);
-        font-size: 55px;
+      /*Title things*/
+      .container {
+        position: relative;
+        text-align: center;
+        color: black;
       }
+      #FHS-robotics-club-title {
+        color: rgb(150);
+        font-size: 55px;
+        /*For if you want a border around the title*/
+        /*border:10px solid rgb(119, 2, 209);*/
+      }
+
+
 
       /* Set height of body and the document to 100% to enable "full page tabs" */
       body, html {
@@ -48,6 +58,7 @@
         background-color: rgb(250, 232, 255);
       }
 
+      /* This stuff is related to coloring of tabs content but not the title.  Colors in the .html section change the title colors */
       #Home-Page {background-color: rgb(0,100,150);}
       #Sign-Up {background-color: rgb(0,100,150);}
       #Tournoment-Infomation {background-color: rgb(0,100,150);}
@@ -56,17 +67,18 @@
     </style>
   </head>
   <body>
-
-    <h1 id="FHS-robotics-club-title">
-      <center> FHS robotics club </center>
-    </h1>
-
+      <img src="pic_trulli.jpg" alt="Trulli" width="500" height="333">
+    <!-- Title stuff -->
+    <div class="container">
+      <h1 id="FHS-robotics-club-title">
+        <center> FHS robotics club </center>
+      </h1>
+    </div>
     <!-- Tab links -->
     <button class="tablink" onclick="openPage('Home-Page', this, 'rgb(0,75,125)')"id="defaultOpen">Home Page</button>
     <button class="tablink" onclick="openPage('Sign-Up', this, 'rgb(0,75,125)')">Sign Up</button>
     <button class="tablink" onclick="openPage('Tournoment-Infomation', this, 'rgb(0,75,125)')">Tournoment Infomation</button>
     <button class="tablink" onclick="openPage('About-our-Teams', this, 'rgb(0,75,125)')">About our Teams</button>
-
 
     <!-- Tab content -->
     <div id="Home-Page" class="tabcontent">
@@ -113,6 +125,13 @@
 
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
+
+      // For border on The title
+      /*
+      function myFunction() {
+        alert(document.getElementById("FHS-robotics-club-title").style.border);
+      }
+      */
     </script>
 
   </body>
