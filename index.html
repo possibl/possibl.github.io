@@ -9,18 +9,22 @@
 
       /*Title things*/
       .container {
+        /* Look here if confused- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_text */
         position: relative;
         text-align: center;
-        color: black;
+        /* Set color for text here */
+        color: purple;
       }
       #FHS-robotics-club-title {
-        color: rgb(150);
         font-size: 55px;
-
+        /* Thing for moving text onto an image for title */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         /*For if you want a border around the title*/
         /*border:10px solid rgb(119, 2, 209);*/
       }
-
 
 
       /* Set height of body and the document to 100% to enable "full page tabs" */
@@ -55,6 +59,7 @@
         height: 100%;
       }
 
+      /* These thing will apply to everything in the body unless over wrtien.  It's like the presets of everything in the body */
       body {
         background-color: rgb(250, 232, 255);
       }
@@ -70,9 +75,9 @@
   <body>
     <!-- Title stuff -->
     <div class="container">
-
+      <!-- Make sure to select copy iamge address and not link <addres for iamge to dispaly>, The alt is just words that will be displayed if the image fails to load-->
+      <img src="https://5starassets.blob.core.windows.net/athleticsites/106/158/images/41fce791-f833-456a-8c07-027c158255f0.png" alt="Bulldog" width="500" height="333">
       <h1 id="FHS-robotics-club-title">
-        <img src="https://5starassets.blob.core.windows.net/athleticsites/106/158/images/41fce791-f833-456a-8c07-027c158255f0.png" alt="Bulldog" width="500" height="333">
         <center> FHS robotics club </center>
       </h1>
     </div>
