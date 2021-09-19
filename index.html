@@ -44,7 +44,7 @@
         cursor: pointer;
         padding: 14px 16px;
         font-size: 17px;
-        width: 25%;
+        width: 20%;/* Changes how many tabs fit on 1 line */
       }
 
       .tablink:hover {
@@ -59,6 +59,9 @@
         height: 100%;
       }
 
+      .sponsorshippage-whatisvex p {
+        padding-right:25%;
+      }
       /* These thing will apply to everything in the body unless over wrtien.  It's like the presets of everything in the body */
       body {
         background-color: rgb(250, 232, 255);
@@ -69,6 +72,7 @@
       #Sign-Up {background-color: rgb(0,100,150);}
       #Tournoment-Infomation {background-color: rgb(0,100,150);}
       #About-our-Teams {background-color: rgb(0,100,150);}
+      #Sponsor-Ship-Infomation {background-color: rgb(0,100,150);}
 
     </style>
   </head>
@@ -86,6 +90,7 @@
     <button class="tablink" onclick="openPage('Sign-Up', this, 'rgb(0,75,125)')">Sign Up</button>
     <button class="tablink" onclick="openPage('Tournoment-Infomation', this, 'rgb(0,75,125)')">Tournoment Infomation</button>
     <button class="tablink" onclick="openPage('About-our-Teams', this, 'rgb(0,75,125)')">About our Teams</button>
+    <button class="tablink" onclick="openPage('Sponsor-Ship-Infomation', this, 'rgb(0,75,125)')">Sponsor Ship Infomation</button>
 
     <!-- Tab content -->
     <div id="Home-Page" class="tabcontent">
@@ -106,6 +111,56 @@
     <div id="About-our-Teams" class="tabcontent">
       <h3>About</h3>
       <p>Who we are and what we do.</p>
+    </div>
+
+    <div id="Sponsor-Ship-Infomation" class="tabcontent">
+      <div class="sponsorshippage-whatisvex">
+        <h3>what is vex?</h3>
+        <img src="https://www.roboticseducation.org//app/uploads/2019/05/Featured_Image_VIQC_Tipping_Point.png" alt="TiP" width="500" height="333" align="right">
+        <p>
+           VEX is both hands-on and minds-on STEM learning.
+           The VEX Robotics Program encourages innovation, team work, self-confidence, communication and leadership.
+           We build, code, program, document and compete with student designed robots.
+           This year's Vex Competition is called Tipping Point, with the object of the game to strategize as part of a team alliance to score more points than the opposing alliance
+           - this includes scoring rings, moving mobile goals to alliance zones, and by balancing on tipping platforms at the end of the match.
+           We will participate in virtual and live competitions. Learn more at <a href="https://www.vexrobotics.com/" target="_blank">vexrobotics.com</a>
+         </p>
+       </div>
+       <h3>Our goal</h3>
+       <p>
+          Our goal is for every interested student to be able to participate in Robotics.
+          With your help, we are able to offset the costs of team registrations ($150/ team), competition fees ($500/ team), transportation to and from competitions ($450/ bus), team t-shirts ($300), and robot kits ($3,000-5,000).</a>
+       </p>
+       <h3>Your sponsorship makes a difference</h3>
+       <p>
+          With your sponsorship support, we are giving a new generation of STEM learners a hands-on opportunity for learning and competing.
+          Sponsors over $250 will be recognized on our team banners - proudly displayed in the classroom and in competition - and through FHS social media channels.
+       </p>
+       <h3>let's put the gears in motion!</h3>
+       <p>
+          Please make your check payable to FHS and memo: Engineering/ Robotics
+          Mailing address: FHS Attn: Janet Stevens
+          994 W. Martin Luther King, Jr. Blvd., Fayetteville, AR 72701
+          Email your logo (or questions) to jeffrey.oconnell@g.fayar.net
+          Your gift is tax deductible. Fayetteville Public Schools, EIN 71-6021514
+        </p>
+        <h3>Please send the following information with your gift:</h3>
+        <p>
+          Contact Name_________________________________ <br>
+          Business Name________________________________ <br>
+          Mailing Address_______________________________ <br>
+          Email ________________________________________ <br>
+          Phone _______________________________________ <br>
+          Gift Amount_________________________ <br>
+          WITH YOUR GIFT ... <br>
+          __ $50 WILL SPONSOR A STUDENT <br>
+          __ $150 WILL REGISTER A TEAM <br>
+          __ $250 WILL ENGAGE A TEAM OF STUDENTS <br>
+          __ $500 WILL SEND A TEAM TO COMPETITION <br>
+          __ $1500 WILL BUILD A ROBOT <br>
+        </p>
+
+
     </div>
 
     <script>
