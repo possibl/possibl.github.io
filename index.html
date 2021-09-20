@@ -37,14 +37,14 @@
 
       /* Style tab links */
       .tablink {
-        background-color: #555;
+        background-color: rgb(100,100,100);
         color: white;
         float: left;
         border: none;
         outline: none;
         cursor: pointer;
         padding: 14px 16px;
-        font-size: 1.5vw;//https://stackoverflow.com/questions/19223916/resize-text-acording-to-screen-size
+        font-size: 1.5vw;/*https://stackoverflow.com/questions/19223916/resize-text-acording-to-screen-size*/
         width: 20%;/* Changes how many tabs fit on 1 line */
       }
 
@@ -56,7 +56,7 @@
       .tabcontent {
         color: white;
         display: none;
-        padding: 100px 20px;
+        padding: 5vh 5vh;
         height: 1000%;
         width: 100%;
       }
@@ -74,21 +74,22 @@
 
       /* This stuff is related to coloring of tabs content but not the title.  Colors in the .html section change the title colors */
       #Home-Page {
-        background-color: rgb(0,100,150);
+        background-color: rgb(75,75,75);
         font-size: 120%;
       }#Sign-Up {
-        background-color: rgb(0,100,150);
+        background-color: rgb(75,75,75);
         font-size: 120%;
       }#Tournoment-Infomation {
-        background-color: rgb(0,100,150);
+        background-color: rgb(75,75,75);
         font-size: 120%;
       }#About-our-Teams {
-        background-color: rgb(0,100,150);
+        background-color: rgb(75,75,75);
         font-size: 120%;
       }#Sponsor-Ship-Infomation {
-        background-color: rgb(0,100,150);
+        background-color: rgb(75,75,75);
         font-size: 120%;
       }
+
 
     </style>
   </head>
@@ -102,17 +103,17 @@
       </h1>
     </div>
     <!-- Tab links -->
-    <button class="tablink" onclick="openPage('Home-Page', this, 'rgb(0,75,125)')"id="defaultOpen">Home Page</button>
-    <button class="tablink" onclick="openPage('Sign-Up', this, 'rgb(0,75,125)')">Sign Up</button>
-    <button class="tablink" onclick="openPage('Tournoment-Infomation', this, 'rgb(0,75,125)')">Tournoment Infomation</button>
-    <button class="tablink" onclick="openPage('About-our-Teams', this, 'rgb(0,75,125)')">About our Teams</button>
-    <button class="tablink" onclick="openPage('Sponsor-Ship-Infomation', this, 'rgb(0,75,125)')">Sponsor Ship Infomation</button>
+    <button class="tablink" onclick="openPage('Home-Page', this, 'rgb(75,75,75)')"id="defaultOpen">Home Page</button>
+    <button class="tablink" onclick="openPage('Sign-Up', this, 'rgb(75,75,75)')">Sign Up</button>
+    <button class="tablink" onclick="openPage('Tournoment-Infomation', this, 'rgb(75,75,75)')">Tournoment Infomation</button>
+    <button class="tablink" onclick="openPage('About-our-Teams', this, 'rgb(75,75,75)')">About our Teams</button>
+    <button class="tablink" onclick="openPage('Sponsor-Ship-Infomation', this, 'rgb(75,75,75)')">Sponsor Ship Infomation</button>
 
     <!-- Tab content -->
     <div id="Home-Page" class="tabcontent">
       <img src="https://www.roboticseducation.org//app/uploads/2019/05/Featured_Image_VIQC_Tipping_Point.png" alt="TiP1" width="20%" align="right" align="top">
       <div class="whatisvex">
-        <h3>what is vex?</h3>
+        <h3>what is veX?</h3>
         <p>
            VEX is both hands-on and minds-on STEM learning.
            The VEX Robotics Program encourages innovation, team work, self-confidence, communication and leadership.
@@ -184,20 +185,16 @@
         // Hide all elements with class="tabcontent" by default */
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
-
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
-
         // Remove the background color of all tablinks/buttons
         tablinks = document.getElementsByClassName("tablink");
         for (i = 0; i < tablinks.length; i++) {
           tablinks[i].style.backgroundColor = "";
         }
-
         // Show the specific tab content
         document.getElementById(pageName).style.display = "block";
-
         // Add the specific color to the button used to open the tab content
         elmnt.style.backgroundColor = color;
       }
@@ -205,12 +202,6 @@
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
 
-      // For border on The title
-      /*
-      function myFunction() {
-        alert(document.getElementById("FHS-robotics-club-title").style.border);
-      }
-      */
     </script>
 
   </body>
